@@ -1,5 +1,9 @@
 HELP.md
 target/
+
+### Local-only learning notes (not for GitHub) ###
+Lessons/
+
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/

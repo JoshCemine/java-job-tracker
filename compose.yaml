@@ -1,0 +1,24 @@
+# Use postgres/example user/password credentials
+
+services:
+
+  db:
+    image: postgres:18
+    restart: always
+    shm_size: 128mb
+    volumes:
+      - pgdata:/var/lib/postgresql
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: admin
+      POSTGRES_DB: job-tracker
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+volumes:
+  pgdata:
